@@ -1,0 +1,46 @@
+
+
+
+
+    <table class="table table-striped card-panel">
+        <thead>
+          <tr>
+            <th>Event</th>
+            <th>Type	</th>
+            <th>Est.date/time </th>
+            <th>Act.date/time</th>
+            <th>Location</th>
+            <th>Country</th>
+            <th>EventNotes</th>
+          </tr>
+
+        </thead>
+        <tbody *ngIf="gridData.length > 0">
+          <tr *ngFor="let c of gridData; let i = index">
+            <td>
+              <span>{{c.Event}}</span>
+            </td>
+            <td>
+              <span> {{c.Type}}</span>
+            </td>
+            <td >
+              <span > {{c.EstDateTime}}</span>
+            </td>
+            <td >
+              <span > {{c.ActDateTime}}</span>
+            </td>
+            <td>
+              <span> {{c.Location}}</span>
+            </td>
+            <td>
+              <span>{{c.Country}}</span>
+            </td>
+            <td>
+              <span> {{c.EventNotes}}</span>
+            </td>
+          </tr>
+
+        </tbody>
+
+      </table>
+  

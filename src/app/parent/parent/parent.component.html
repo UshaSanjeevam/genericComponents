@@ -1,0 +1,42 @@
+
+<app-child [parentValue] ="count"></app-child>
+
+
+    
+<div>
+    HTML   <input #oldValue="ngModel" [(ngModel)]="html" type="radio" name="HTML"  (ngModelChange)="onChange(oldValue)"/>
+  </div>
+  <table>
+     
+  <tr *ngFor="let viewmodel of griddata">
+      <td>{{viewmodel.Country}} </td>
+  </table>
+  <app-html-generation></app-html-generation>
+
+  <div> HTML Table Generation
+<table>
+    <tr>
+        <td>
+            <table>
+                <tr >
+                        <th *ngFor='let col of htmlviewModelHeader'>
+                                {{col}}
+                              </th>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+            <td>
+                <table>
+                        <tr *ngFor="let char of griddata ">
+                                <td *ngFor="let col of htmlviewModelHeader">
+                                  {{char[col]}}
+                                </td>
+                              </tr>
+                </table>
+            </td>
+        </tr>
+</table>
+
+  </div>
